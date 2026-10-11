@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" id="app" hidden>
+    <div class="backdrop">
+        <div class="bd-grid"></div>
+        <div class="bd-glow bd-glow-a"></div>
+        <div class="bd-glow bd-glow-b"></div>
+        <span class="bd-word">NEON</span>
+        <div class="bd-scan"></div>
+        <div class="bd-vignette"></div>
+    </div>
+
+    <div class="shell" id="shell" hidden>
+        <aside class="side">
+            <div class="brand">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l8-5 8 5"/><path d="M5 10h14"/><path d="M7 10v7"/><path d="M12 10v7"/><path d="M17 10v7"/><path d="M4 19h16"/></svg>
+                </span>
+                <div class="brand-text">
+                    <span id="brandKicker"></span>
+                    <b id="bankName"></b>
+                </div>
+            </div>
+
+            <nav class="nav" id="nav"></nav>
+
+            <div class="side-foot">
+                <button class="side-btn" id="pinBtn" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                    <span id="pinBtnLabel"></span>
+                </button>
+                <button class="side-btn side-btn-close" id="closeBtn" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+                    <span>Kapat</span>
+                    <kbd>ESC</kbd>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="top">
+                <div class="top-title">
+                    <span id="viewKicker"></span>
+                    <h1 id="viewTitle"></h1>
+                </div>
+                <div class="wallets">
+                    <div class="wallet">
+                        <span>Nakit</span>
+                        <b id="cashValue"></b>
+                    </div>
+                    <div class="wallet wallet-main">
+                        <span>Banka bakiyesi</span>
+                        <b id="bankValue"></b>
+                    </div>
+                </div>
+            </header>
+
+            <div class="view" id="view"></div>
+        </main>
+    </div>
+
+    <div class="pin-layer" id="pinLayer" hidden>
+        <div class="pin-card">
+            <span class="pin-kicker" id="pinKicker"></span>
+            <h2 id="pinTitle"></h2>
+            <p id="pinHint"></p>
+            <div class="pin-dots" id="pinDots"><i></i><i></i><i></i><i></i></div>
+            <div class="pin-keys" id="pinKeys"></div>
+            <button class="pin-cancel" id="pinCancel" type="button">Vazgeç</button>
+        </div>
+    </div>
+
+    <div class="toasts" id="toasts"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
